@@ -11,7 +11,6 @@
 
     <h3>Menu</h3>
     <div class="menu">
-        <b-button squared variant="primary">Button</b-button>
         <routerLink class="button" to="/">
             <span class="material-icons">home</span>
             <span class="text">Home</span>
