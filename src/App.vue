@@ -1,7 +1,12 @@
 <template>
   <div class="app">
-    <Sidebar />
-    <router-view></router-view>
+    <div>
+      <Sidebar />
+    </div>
+    <div>
+      <header></header>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -26,6 +31,7 @@ import Sidebar from "./components/App-Sidebar.vue";
   box-sizing: border-box;
   font-family: "Fira sans", sans-serif;
 }
+
 body {
   background: var(--light);
 }
@@ -36,12 +42,22 @@ button {
   outline: none;
   background: none;
 }
+header {
+  width: 100vw;
+  background-color: var(--dark-alt);
+  padding: 30px;
+}
 .app {
   display: flex;
+  flex-direction: row;
   main {
     flex: 1 1 0;
     padding: 2rem;
-    @media (max-width: 1024px) {
+    
+  }
+
+  main, header {
+    @media (max-width: 768px) { // why 1024 ?
       padding-left: 6rem;
     }
   }
