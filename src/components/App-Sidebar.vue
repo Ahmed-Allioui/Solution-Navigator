@@ -45,6 +45,7 @@ const ToggleMenu = () => {
 <style lang="scss" scoped>
 
 $transition-speed: 0.2s;
+$ipad-width: 768px;
 
 aside {
   display: flex;
@@ -56,6 +57,7 @@ aside {
   background-color: var(--dark);
   color: var(--light);
   transition: var($transition-speed) ease-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   .logo {
     margin-bottom: 1rem;
@@ -157,7 +159,7 @@ aside {
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $ipad-width) {
     position: fixed;
     z-index: 99;
   }
