@@ -3,9 +3,13 @@
     <div>
       <Sidebar />
     </div>
-    <div>
-      <header></header>
-      <router-view></router-view>
+    <div class="body-container">
+      <div>
+        <header></header>
+      </div>
+      <div>
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -43,13 +47,14 @@ button {
   background: none;
 }
 header {
-  width: 100vw;
   background-color: var(--dark-alt);
   padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .app {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   main {
     flex: 1 1 0;
     padding: 2rem;
@@ -61,5 +66,11 @@ header {
       padding-left: 6rem;
     }
   }
+}
+
+.app .body-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 </style>
