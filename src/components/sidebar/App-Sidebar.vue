@@ -2,44 +2,47 @@
   <aside :class="`${this.is_expanded ? 'is-expanded' : ''}`">
     <div class="logo">
       <img src="../../assets/logo.png" alt="Vue" />
+      <div class="titel-container">
+        <div class="titel">SOLUTION</div>
+        <div class="titel">NAVIGATOR</div>
+      </div>
     </div>
     <div class="menu-toggle-wrap">
-        <div class="menu-toggle" @click="ToggleMenu">
-            <span class="material-icons">keyboard_double_arrow_right</span>
-        </div>
+      <div class="menu-toggle" @click="ToggleMenu">
+        <span class="material-icons">keyboard_double_arrow_right</span>
+      </div>
     </div>
-    <h3>Menu</h3>
+    <h3>Übungen</h3>
     <div class="menu" v-for="tab in tabs" :key="tab.path">
-        <routerLink class="button" :to="{ name: tab.name }">
-            <span class="text-icons">{{tab.textIcon}}</span>
-            <span class="text">{{tab.title}}</span>
-        </routerLink>
+      <routerLink class="button" :to="{ name: tab.name }">
+        <span class="text-icons">{{ tab.textIcon }}</span>
+        <span class="text">{{ tab.title }}</span>
+      </routerLink>
     </div>
   </aside>
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref } from "vue";
 export default {
-    data() {
-        return {
-            is_expanded : ref(localStorage.getItem("is-expanded") === "true").value
-        }
+  data() {
+    return {
+      is_expanded: ref(localStorage.getItem("is-expanded") === "true").value,
+    };
+  },
+  props: {
+    tabs: [],
+  },
+  methods: {
+    ToggleMenu() {
+      this.is_expanded = !this.is_expanded;
+      localStorage.setItem("is-expanded", this.is_expanded);
     },
-    props: {
-        tabs : []
-    },
-    methods: {
-        ToggleMenu() { 
-            this.is_expanded = !this.is_expanded;
-            localStorage.setItem("is-expanded", this.is_expanded)
-        }
-    }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-
 $transition-speed: 0.2s;
 $ipad-width: 768px;
 
@@ -56,9 +59,25 @@ aside {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-bottom: 1rem;
     img {
-        width: var(--icon-width);
+      width: var(--icon-width);
+    }
+
+    .titel-container {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0.8rem;
+
+      .titel {
+        padding-left: 1rem;
+        font-size: 1rem;
+        text-shadow: 2px 2px 8px var(--light);
+        transition: var($transition-speed) ease-out;
+      }
     }
   }
 
@@ -71,24 +90,25 @@ aside {
     transition: var($transition-speed) ease-out;
 
     .menu-toggle {
+      transition: var($transition-speed) ease-out;
+
+      .text-icons {
+        font-size: 2rem;
+        color: var(--light);
         transition: var($transition-speed) ease-out;
+      }
 
+      &:hover {
         .text-icons {
-            font-size: 2rem;
-            color: var(--light);
-            transition: var($transition-speed) ease-out;
+          color: var(--primary);
+          transform: translateX(0.1rem);
         }
-
-        &:hover {
-            .text-icons {
-                color: var(--primary);
-                transform: translateX(0.1rem);
-            }
-        }
+      }
     }
   }
 
-  h3, .button .text {
+  h3,
+  .button .text {
     opacity: 0;
     transition: 0.3s ease-out;
   }
@@ -104,56 +124,59 @@ aside {
     margin: 0 -1rem;
 
     .button {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
 
-        padding: 0.5rem 1rem;
+      padding: 0.5rem 1rem;
+      transition: var($transition-speed) ease-out;
+
+      .text-icons {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--light);
         transition: var($transition-speed) ease-out;
+      }
 
-        .text-icons {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--light);
-            transition: var($transition-speed) ease-out;
-        }
+      .text {
+        color: var(--light);
+        transition: var($transition-speed) ease-out;
+      }
 
+      &:hover,
+      &.router-link-active {
+        background-color: var(--dark-alt);
+
+        .text-icons,
         .text {
-            color: var(--light);
-            transition: var($transition-speed) ease-out;
+          color: var(--primary);
         }
+      }
 
-        &:hover, &.router-link-active {
-            background-color: var(--dark-alt);
-
-            .text-icons, .text {
-                color: var(--primary);
-            }
-        }
-
-        &.router-link-active {
-            border: 0;
-            border-right: 5px solid var(--primary);
-        }
+      &.router-link-active {
+        border: 0;
+        border-right: 5px solid var(--primary);
+      }
     }
   }
 
   &.is-expanded {
     width: var(--sidebar-width);
     .menu-toggle-wrap {
-        top: -3rem;
-        .menu-toggle {
-            transform: rotate(-180deg);
-        }
+      top: -3rem;
+      .menu-toggle {
+        transform: rotate(-180deg);
+      }
     }
-    h3, .button .text {
-        opacity: 1;
+    h3,
+    .button .text {
+      opacity: 1;
     }
 
     .button {
-        .text-icons {
-            margin-right: 1rem;
-        }
+      .text-icons {
+        margin-right: 1rem;
+      }
     }
   }
 
