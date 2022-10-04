@@ -1,11 +1,11 @@
 <template>
   <div class="app">
     <div>
-      <Sidebar :tabs="practicesRoutes"/>
+      <Sidebar :tabs="practicesRoutes" />
     </div>
     <div class="body-container">
       <div>
-        <Navbar :tabs="routes"/>
+        <Navbar :tabs="routes" />
       </div>
       <div>
         <router-view></router-view>
@@ -15,10 +15,10 @@
 </template>
 
 <script setup>
-import Sidebar from "./components/sidebar/App-Sidebar.vue"
-import Navbar from "./components/navbar/App-Navbar.vue"
-import practicesRoutes from './views/practices/router'
-import routes from './router/routes'
+import Sidebar from "./components/sidebar/App-Sidebar.vue";
+import Navbar from "./components/navbar/App-Navbar.vue";
+import practicesRoutes from "./views/practices/router";
+import routes from "./router/routes";
 </script>
 
 <style lang="scss">
@@ -53,22 +53,15 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  main {
-    flex: 1 1 0;
-    padding: 2rem;
-    
-  }
 
-  main, header {
-    @media (max-width: 768px) { // why 1024 ?
-      padding-left: 6rem;
+  .body-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    @media (max-width: 768px) {
+      margin-left: calc(var(--icon-width) + 2rem);
     }
   }
-}
-
-.app .body-container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
 }
 </style>

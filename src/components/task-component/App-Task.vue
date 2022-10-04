@@ -35,11 +35,6 @@ export default {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      //padding: 8px; // todo: necessary ?
-    }
-
-    @media (max-width: 768px) { // why 1024 ?
-      margin-left: calc(3% + var(--icon-width) + 2rem);
     }
   }
 
