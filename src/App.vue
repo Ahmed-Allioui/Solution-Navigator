@@ -1,11 +1,11 @@
 <template>
   <div class="app">
     <div>
-      <Sidebar />
+      <Sidebar :tabs="practicesRoutes"/>
     </div>
     <div class="body-container">
       <div>
-        <header></header>
+        <Navbar :tabs="routes"/>
       </div>
       <div>
         <router-view></router-view>
@@ -15,12 +15,15 @@
 </template>
 
 <script setup>
-import Sidebar from "./components/App-Sidebar.vue";
+import Sidebar from "./components/sidebar/App-Sidebar.vue"
+import Navbar from "./components/navbar/App-Navbar.vue"
+import practicesRoutes from './views/practices/router'
+import routes from './router/routes'
 </script>
 
 <style lang="scss">
 :root {
-  --primary: #4ade80;
+  --primary: #4a8fde;
   --grey: #64748b;
   --dark: #1e293b;
   --dark-alt: #334155;
@@ -45,11 +48,6 @@ button {
   border: none;
   outline: none;
   background: none;
-}
-header {
-  background-color: var(--dark-alt);
-  padding: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .app {
   display: flex;
