@@ -1,14 +1,15 @@
 <template>
-    <AppTask :tabs="cssRouter"/>
+    <AppTask :tabs="routes"/>
 </template>
 
 <script>
 import AppTask from '../../../components/task-component/App-Task.vue'
-import cssRouter from '../../../views/practices/css/css-router'
+import routes from '../../../views/practices/css/css-routes'
+
 export default {
     data() {
         return {
-            cssRouter: cssRouter
+            routes: routes
         }
     },
     components: {

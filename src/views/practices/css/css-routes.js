@@ -1,6 +1,6 @@
 import Task from '../../../views/practices/css/CSS-Practice.vue'
 
-const routers =
+const routes =
     [
         {
             path: 'something',
@@ -10,4 +10,4 @@ const routers =
         }
 ]
 
-export default routers
+export default routes

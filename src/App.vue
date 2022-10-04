@@ -17,11 +17,13 @@
 <script setup>
 import Sidebar from "./components/sidebar/App-Sidebar.vue";
 import Navbar from "./components/navbar/App-Navbar.vue";
-import practicesRoutes from "./views/practices/router";
+import practicesRoutes from "./views/practices/practices-routes";
 import routes from "./router/routes";
 </script>
 
 <style lang="scss">
+
+// defining global style
 :root {
   --primary: #4a8fde;
   --grey: #64748b;

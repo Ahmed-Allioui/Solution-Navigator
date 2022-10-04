@@ -1,7 +1,7 @@
 import CSS from './css/CSS-Practice.vue'
-import cssRouter from './css/css-router'
+import cssRouter from './css/css-routes'
 
-const routers =
+const routes =
     [
         {
             path: 'http',
@@ -21,4 +21,4 @@ const routers =
         }
 ]
 
-export default routers
+export default routes
