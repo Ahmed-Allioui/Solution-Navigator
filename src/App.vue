@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <div>
+    <div class="sidebar-container">
       <Sidebar :tabs="practicesRoutes" />
     </div>
     <div class="body-container">
@@ -51,10 +51,31 @@ button {
   outline: none;
   background: none;
 }
+
+li, p, h3, h4, h5 {
+  padding-bottom: 1rem;
+}
+
+h3, h4, h5 {
+  padding-bottom: 2rem;
+}
+
+h2, h1 {
+  padding-bottom: 3rem;
+}
+
+ol, ul {
+  padding-left: 2rem;
+}
+
 .app {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+
+  .sidebar-container {
+    display: flex;
+    flex-direction: row;
+  }
 
   .body-container {
     display: flex;
