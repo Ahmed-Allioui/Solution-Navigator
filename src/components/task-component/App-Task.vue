@@ -5,7 +5,9 @@
         <NavbarButton :text="tab.title" :to="{ name: tab.name }"/>
       </div>
     </div>
-    <div class="container task-answer-container">This field should be filled with answers.</div>
+    <div class="container task-answer-container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -26,10 +28,16 @@ export default {
   display: flex;
   flex-direction: column;
 
-  .container {
-    margin: 2% 3% 0% 3%;
-    background-color: red;
+  .task-navbar-container, .task-answer-container {
+    display: flex;
+    flex-direction: row;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .task-navbar-container {
+    background-color: var(--dark-alt);
+    justify-content: center;
+    margin: 2% 3% 1% 3%;
 
     .menu {
       display: flex;
@@ -38,14 +46,20 @@ export default {
     }
   }
 
-  .task-navbar-container {
-    background-color: var(--dark-alt);
-  }
-
   .task-answer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: var(--light);
     padding: 2rem;
+    margin: 1% 3% 2% 3%;
   }
 }
 
+</style>
+
+<style>
+.question {
+  font-weight: 580;
+}
 </style>
