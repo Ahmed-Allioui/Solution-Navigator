@@ -27,7 +27,7 @@ const routes = [
         icon: 'mail'
     },
     {
-        path: 'practices',
+        path: '/practices',
         component: Practices,
         children: practicesRoutes
     },
