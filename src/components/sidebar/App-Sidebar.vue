@@ -14,9 +14,9 @@
     </div>
     <h3>Übungen</h3>
     <div class="menu" v-for="tab in tabs" :key="tab.path">
-      <routerLink class="button" :to="{ name: tab.name }">
+      <routerLink class="button" :to="{ name: tab.home_name }">
         <span class="text-icons">{{ tab.textIcon }}</span>
-        <span class="text">{{ tab.title }}</span>
+        <span class="text" v-show="is_expanded === true">{{ tab.title }}</span>
       </routerLink>
     </div>
   </aside>
