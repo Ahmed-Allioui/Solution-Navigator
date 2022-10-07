@@ -1,23 +1,25 @@
 import CSS from './css/CSS-Practice.vue'
-import cssRouter from './css/css-routes'
+import HTTP from './01-http-uri-html/HTTP-Practice.vue'
+import cssRoutes from './css/css-routes'
+import httpRoutes from './01-http-uri-html/http-routes'
 
 const routes =
     [
         {
             path: 'http',
-            component: CSS,
+            component: HTTP,
             textIcon: '01',
-            title: 'HTTP',
-            name: 'http',
-            children: cssRouter
+            title: 'HTTP, URI und HTML',
+            home_name: 'http',
+            children: httpRoutes
         },
         {
             path: 'css',
             component: CSS,
-            textIcon: '01',
+            textIcon: '02',
             title: 'CSS',
-            name: 'css',
-            children: cssRouter
+            home_name: 'css',
+            children: cssRoutes
         }
 ]
 
