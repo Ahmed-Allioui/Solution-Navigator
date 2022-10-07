@@ -1,6 +1,6 @@
-import CSS from './css/CSS-Practice.vue'
+import CSS from './css-styling/CSS-Practice.vue'
 import HTTP from './01-http-uri-html/HTTP-Practice.vue'
-import cssRoutes from './css/css-routes'
+import cssRoutes from './css-styling/css-routes'
 import httpRoutes from './01-http-uri-html/http-routes'
 
 const routes =

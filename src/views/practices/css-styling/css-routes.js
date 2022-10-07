@@ -1,4 +1,4 @@
-import Task from '../../../views/practices/css/CSS-Practice.vue'
+import Task from './CSS-Practice.vue'
 
 const routes =
     [
