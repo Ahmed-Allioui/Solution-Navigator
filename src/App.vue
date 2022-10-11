@@ -52,6 +52,11 @@ button {
   background: none;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 li, p, h3, h4, h5 {
   padding-bottom: 1rem;
 }
