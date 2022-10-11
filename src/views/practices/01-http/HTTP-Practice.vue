@@ -4,7 +4,7 @@
 
 <script>
 import AppTask from '../../../components/task-component/App-Task.vue'
-import routes from '../../../views/practices/01-http-uri-html/http-routes'
+import routes from '../../../views/practices/01-http/http-routes'
 
 export default {
     data() {

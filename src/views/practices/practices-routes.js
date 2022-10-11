@@ -1,7 +1,7 @@
-import HTTP from './01-http-uri-html/HTTP-Practice.vue'
+import HTTP from './01-http/HTTP-Practice.vue'
 import CSS from './02-css/CSS-Practice.vue'
 import RWD from './03-rwd/RWD-Practice.vue'
-import httpRoutes from './01-http-uri-html/http-routes'
+import httpRoutes from './01-http/http-routes'
 import cssRoutes from './02-css/css-routes'
 import rwdRoutes from './03-rwd/rwd-routes'
 
