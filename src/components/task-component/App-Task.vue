@@ -62,4 +62,18 @@ export default {
 .question {
   font-weight: 580;
 }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+th {
+  padding: 0.7rem 1.4rem 0.7rem 1.4rem;
+}
+td {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
 </style>
