@@ -1,7 +1,9 @@
-import CSS from './css-styling/CSS-Practice.vue'
 import HTTP from './01-http-uri-html/HTTP-Practice.vue'
-import cssRoutes from './css-styling/css-routes'
+import CSS from './02-css/CSS-Practice.vue'
+import RWD from './03-rwd/RWD-Practice.vue'
 import httpRoutes from './01-http-uri-html/http-routes'
+import cssRoutes from './02-css/css-routes'
+import rwdRoutes from './03-rwd/rwd-routes'
 
 const routes =
     [
@@ -17,9 +19,17 @@ const routes =
             path: 'css',
             component: CSS,
             textIcon: '02',
-            title: 'CSS',
+            title: 'Cascading Style Sheets (CSS)',
             home_name: 'css',
             children: cssRoutes
+        },
+        {
+            path: 'rwd',
+            component: RWD,
+            textIcon: '03',
+            title: 'Responsive Web Design (RWD)',
+            home_name: 'rwd',
+            children: rwdRoutes
         }
 ]
 
