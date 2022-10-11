@@ -44,6 +44,8 @@ $ipad-width: "1000px"; // these values are only approximation
 $phone-width: "700px";
 $body-color: rgb(237, 236, 226);
 .main-container {
+  max-width: 700px;
+  align-self: center;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto auto;
@@ -61,7 +63,6 @@ $body-color: rgb(237, 236, 226);
       "navbar navbar"
       "sidebar body"
       "footer footer";
-    padding: 2vw 5vw 2vw 5vw;
   }
 
   @media screen and (min-width: $ipad-width) {
