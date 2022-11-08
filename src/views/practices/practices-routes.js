@@ -1,9 +1,11 @@
 import HTTP from './01-http/HTTP-Practice.vue'
 import CSS from './02-css/CSS-Practice.vue'
 import RWD from './03-rwd/RWD-Practice.vue'
+import JS from './04-js/JS-Practice.vue'
 import httpRoutes from './01-http/http-routes'
 import cssRoutes from './02-css/css-routes'
 import rwdRoutes from './03-rwd/rwd-routes'
+import jsRoutes from './04-js/js-routes'
 
 const routes =
     [
@@ -30,6 +32,14 @@ const routes =
             title: 'Responsive Web Design (RWD)',
             home_name: 'rwd',
             children: rwdRoutes
+        },
+        {
+            path: 'js',
+            component: JS,
+            textIcon: '04',
+            title: 'JavaScript (JS)',
+            home_name: 'js',
+            children: jsRoutes
         }
 ]
 
