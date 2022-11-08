@@ -73,6 +73,15 @@ ol, ul {
   padding-left: 2rem;
 }
 
+button.primary {
+  background: var(--dark-alt);
+  border: 1px solid var(--dark-alt);
+  border-radius: 0.2vw;
+  padding: 0.1vw 0.4vw 0.1vw 0.4vw;
+  margin: 0.1vw 0.4vw 0.1vw 0.4vw;
+  color: white;
+}
+
 .app {
   display: flex;
   flex-direction: row;
