@@ -1,4 +1,5 @@
 <template>
+    <h1>Objekte</h1>
     <div>
         <label
         >Geben Sie die Anzahl der Personen ein:
