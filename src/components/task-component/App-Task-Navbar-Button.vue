@@ -16,8 +16,9 @@
 <style lang="scss" scoped>
 
 .button {
-    padding: 0.7rem 1.5rem;
+    padding: 0.7rem 1.5vw;
     text-decoration: none;
+    text-align: center;
 
     .text {
     color: var(--light);
