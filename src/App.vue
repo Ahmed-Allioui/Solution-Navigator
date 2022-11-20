@@ -30,6 +30,7 @@ import routes from "./router/routes";
   --dark: #1e293b;
   --dark-alt: #334155;
   --light: #f1f5f9;
+  --error: #ff0000;
 
   --sidebar-width: 300px; // max width
   --icon-width: 2rem;
@@ -44,12 +45,14 @@ import routes from "./router/routes";
 body {
   background: var(--light);
 }
+
 button {
   cursor: pointer;
   appearance: none;
   border: none;
   outline: none;
   background: none;
+
 }
 
 img {
@@ -73,13 +76,31 @@ ol, ul {
   padding-left: 2rem;
 }
 
+button, input, select, .border {
+  padding: 8px 12px;
+  margin: 8px 3px;
+  border-radius: 5px;
+  font-size: medium;
+}
+
+.border {
+  border: 1px solid black;
+}
+
 button.primary {
   background: var(--dark-alt);
-  border: 1px solid var(--dark-alt);
-  border-radius: 0.2vw;
-  padding: 0.1vw 0.4vw 0.1vw 0.4vw;
-  margin: 0.1vw 0.4vw 0.1vw 0.4vw;
   color: white;
+  border: 1px solid var(--dark-alt);
+}
+
+.error {
+  color: var(--error);
+}
+
+button.error {
+  background: var(--error);
+  color: white;
+  border: 1px solid var(--error);
 }
 
 .app {
