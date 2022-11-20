@@ -20,8 +20,9 @@
 .button {
     display: flex;
     align-items: center;
-    padding: 0.7rem 1.5rem;
+    padding: 0.7rem 1.2rem;
     text-decoration: none;
+    font-size: medium;
     
     .text {
         padding-left: 5px;
