@@ -8,7 +8,7 @@
 <script>
     export default {
         props: {
-            to: { type: String, default: '/pagenotfound' },
+            to: { default: '/pagenotfound' },
             text: { type: String, default: 'click me' },
             icon: { type: String, default: 'menu' }
         }

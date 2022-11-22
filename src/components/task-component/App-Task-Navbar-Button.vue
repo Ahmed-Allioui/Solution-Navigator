@@ -7,7 +7,7 @@
 <script>
     export default {
         props: {
-            to: { type: String, default: '/page-not-found' },
+            to: { default: '/page-not-found' },
             text: { type: String, default: 'click me' },
         }
     };
