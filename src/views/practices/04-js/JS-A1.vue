@@ -208,8 +208,4 @@ export default {
 li .red {
   color: red;
 }
-
-select {
-  padding: 0 0.3vw 0 0.3vw;
-}
 </style>
