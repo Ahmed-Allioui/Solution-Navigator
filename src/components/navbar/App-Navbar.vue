@@ -15,7 +15,9 @@
 import NavbarButton from "./App-Navbar-Button.vue";
 export default {
   props: {
-    tabs: [],
+    tabs: {
+        type: Array
+    },
   },
   components: {
     NavbarButton,

@@ -31,7 +31,9 @@ export default {
     };
   },
   props: {
-    tabs: [],
+    tabs: {
+        type: Array
+    },
   },
   methods: {
     ToggleMenu() {
