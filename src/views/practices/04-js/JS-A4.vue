@@ -73,22 +73,12 @@
 </template>
 
 <script>
+
+import Queue from "../../../utils/Queue"
+
 function Task() {
   this.next = [];
   this.level = 0;
-}
-
-function Queue() {
-  this.queue = [];
-  this.push = function (value) {
-    this.queue.push(value);
-  };
-  this.pop = function () {
-    return this.queue.pop();
-  };
-  this.hasNext = function () {
-    return this.queue.length > 0;
-  };
 }
 
 export default {
@@ -168,10 +158,9 @@ export default {
      */
     processSorting(queue, map_tasks) {
       var sorted_tasks = [];
-      console.log(queue.hasNext());
-      while (queue.hasNext()) {
+      while (!queue.isEmpty()) {
         // getting actual element
-        var actual_value = queue.pop();
+        var actual_value = queue.pull();
 
         // push the actual element in the sorted array
         sorted_tasks.push(actual_value);
