@@ -2,18 +2,7 @@
     <AppTask :tabs="routes"/>
 </template>
 
-<script>
+<script setup>
 import AppTask from '../../../components/task-component/App-Task.vue'
 import routes from '../06-es/es-routes'
-
-export default {
-    data() {
-        return {
-            routes: routes
-        }
-    },
-    components: {
-        AppTask
-    }
-};
 </script>
