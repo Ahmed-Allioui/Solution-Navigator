@@ -7,7 +7,7 @@
       <div>
         <Navbar :tabs="routes" />
       </div>
-      <div>
+      <div class="router-container">
         <router-view></router-view>
       </div>
     </div>
@@ -76,7 +76,7 @@ ol, ul {
   padding-left: 2rem;
 }
 
-button, input, select, .border {
+button, input, select, .border, textarea {
   padding: 8px 12px;
   margin: 8px 3px;
   border-radius: 5px;
@@ -121,5 +121,9 @@ button.error {
       margin-left: calc(var(--icon-width) + 2rem);
     }
   }
+}
+
+.router-container{
+  height: 100%;
 }
 </style>
