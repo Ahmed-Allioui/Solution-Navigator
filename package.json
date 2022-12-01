@@ -14,6 +14,7 @@
     "core-js": "^3.8.3",
     "jquery": "^1.9.1",
     "portal-vue": "^2.1.7",
+    "stopwords-de": "^0.3.0",
     "vue": "^3.2.40",
     "vue-router": "^4.1.5",
     "vuex": "^4.0.2"
