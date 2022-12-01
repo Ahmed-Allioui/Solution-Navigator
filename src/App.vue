@@ -93,6 +93,12 @@ button.primary {
   border: 1px solid var(--dark-alt);
 }
 
+button.light {
+  background: var(--primary);
+  color: black;
+  border: 1px solid var(--primary);
+}
+
 .error {
   color: var(--error);
 }
