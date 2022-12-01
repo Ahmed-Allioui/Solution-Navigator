@@ -6,6 +6,8 @@ import DOM from './05-dom/DOM-Practice.vue'
 import ES from './06-es/ES-Practice.vue'
 import FP from './07-fp/FP-Practice.vue'
 import AJ from './08-aj/AJ-Practice.vue'
+import SVG from './09-svg/SVG-Practice.vue'
+import TS from './10-ts/TS-Practice.vue'
 
 import httpRoutes from './01-http/http-routes'
 import cssRoutes from './02-css/css-routes'
@@ -15,6 +17,8 @@ import domRoutes from './05-dom/dom-routes'
 import esRoutes from './06-es/es-routes'
 import fpRoutes from './07-fp/fp-routes'
 import ajRoutes from './08-aj/aj-routes'
+import svgRoutes from './09-svg/svg-routes'
+import tsRoutes from './10-ts/ts-routes'
 
 const routes =
     [
@@ -81,6 +85,22 @@ const routes =
             title: 'Asynchrones Javascript (AJ)',
             home_name: 'aj',
             children: ajRoutes
+        },
+        {
+            path: 'svg',
+            component: SVG,
+            textIcon: '09',
+            title: 'Scalable Vector Graphics (SVG)',
+            home_name: 'svg',
+            children: svgRoutes
+        },
+        {
+            path: 'ts',
+            component: TS,
+            textIcon: '10',
+            title: 'TypeScript (TS)',
+            home_name: 'ts',
+            children: tsRoutes
         }
 ]
 
