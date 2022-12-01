@@ -4,6 +4,8 @@ import RWD from './03-rwd/RWD-Practice.vue'
 import JS from './04-js/JS-Practice.vue'
 import DOM from './05-dom/DOM-Practice.vue'
 import ES from './06-es/ES-Practice.vue'
+import FP from './07-fp/FP-Practice.vue'
+import AJ from './08-aj/AJ-Practice.vue'
 
 import httpRoutes from './01-http/http-routes'
 import cssRoutes from './02-css/css-routes'
@@ -11,6 +13,8 @@ import rwdRoutes from './03-rwd/rwd-routes'
 import jsRoutes from './04-js/js-routes'
 import domRoutes from './05-dom/dom-routes'
 import esRoutes from './06-es/es-routes'
+import fpRoutes from './07-fp/fp-routes'
+import ajRoutes from './08-aj/aj-routes'
 
 const routes =
     [
@@ -61,6 +65,22 @@ const routes =
             title: 'ECMAScript (ES)',
             home_name: 'es',
             children: esRoutes
+        },
+        {
+            path: 'fp',
+            component: FP,
+            textIcon: '07',
+            title: 'Funktionale Prog. (FP)',
+            home_name: 'fp',
+            children: fpRoutes
+        },
+        {
+            path: 'aj',
+            component: AJ,
+            textIcon: '08',
+            title: 'Asynchrones Javascript (AJ)',
+            home_name: 'aj',
+            children: ajRoutes
         }
 ]
 
