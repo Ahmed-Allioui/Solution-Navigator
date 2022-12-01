@@ -50,7 +50,7 @@ Vorrang.prototype[Symbol.iterator] = function () {
 
     var queue = initQueue();
 
-    const nextElement = function () {
+    this.nextElement = function () {
         if (queue.isEmpty()) return null;
         var value = queue.pull();
         for (let task of map.get(value).next) {
@@ -64,9 +64,9 @@ Vorrang.prototype[Symbol.iterator] = function () {
     };
 
     return {
-        next: function () {
-            if (!queue.isEmpty()) return { value: nextElement(), done: false };
-            return { value: nextElement(), done: true };
+        next: () => {
+            if (!queue.isEmpty()) return { value: this.nextElement(), done: false };
+            return { value: this.nextElement(), done: true };
         },
     };
 };
