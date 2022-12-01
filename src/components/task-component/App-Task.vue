@@ -30,6 +30,7 @@ $phone-width: "700px";
 .task-container {
   display: flex;
   flex-direction: column;
+  height: 100%;
   padding-top: 20px;
   row-gap: 20px;
 
@@ -54,8 +55,10 @@ $phone-width: "700px";
   .task-answer-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: var(--light);
+    height: 100%;
+    margin-bottom: 30px;
     padding: 2rem;
     width: auto;
   }
