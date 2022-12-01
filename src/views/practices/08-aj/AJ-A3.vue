@@ -5,7 +5,10 @@
       <div class="titel-container">WWW-Navigator</div>
       <div class="topic-container">
         <button
-          class="primary topic-button"
+          v-bind:class="{
+            light: isTopicClicked(topic),
+            primary: !isTopicClicked(topic),
+          }"
           @click="setTopic(topic)"
           v-for="(topic, index) in Object.keys(www)"
           :key="index"
@@ -16,7 +19,10 @@
     </div>
     <div class="sidebar container">
       <button
-        class="primary"
+        v-bind:class="{
+          light: isSubtopicClicked(subtopic),
+          primary: !isSubtopicClicked(subtopic),
+        }"
         @click="setSubtopic(subtopic)"
         v-for="(subtopic, index) in Object.keys(www[topic])"
         :key="index"
@@ -30,11 +36,13 @@
     <div class="footer container">
       <div>sources</div>
       <ul>
-        <li v-for="(reference, index) in www[topic][subtopic].references" :key="index">
-          <a v-bind:href="reference">Source [{{index + 1}}]</a>
+        <li
+          v-for="(reference, index) in www[topic][subtopic].references"
+          :key="index"
+        >
+          <a v-bind:href="reference">Source [{{ index + 1 }}]</a>
         </li>
       </ul>
-      
     </div>
   </div>
 </template>
@@ -44,8 +52,8 @@ export default {
   data() {
     return {
       www: null,
-      topic: '',
-      subtopic: '',
+      topic: "",
+      subtopic: "",
     };
   },
   mounted() {
@@ -66,6 +74,12 @@ export default {
     },
     setSubtopic(subtopic) {
       this.subtopic = subtopic;
+    },
+    isTopicClicked(topic) {
+      return topic == this.topic;
+    },
+    isSubtopicClicked(subtopic) {
+      return subtopic == this.subtopic;
     },
   },
 };
@@ -126,13 +140,22 @@ $phone-width: "700px";
   }
   .body {
     grid-area: body;
-    background-color: rgb(150, 178, 233);
+    background-color: rgb(177, 196, 233);
   }
   .sidebar {
     grid-area: sidebar;
     background-color: rgb(191, 206, 235);
-    button {
-      width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    @media screen and (min-width: $phone-width) {
+      flex-direction: column;
+      justify-content: start;
+      button {
+        width: 100%;
+      }
     }
   }
   .footer {
