@@ -5,7 +5,7 @@
     mit Inline SVG, CSS und JS.
   </p>
   <h3>Ergebnis:</h3>
-  <div v-if="play" class="game-container">
+  <div class="game-container">
     <svg viewBox="0 0 90 90">
       <defs>
         <rect id="rect" width="30" height="30" fill="white" stroke="black" />
@@ -38,14 +38,12 @@
       </g>
     </svg>
   </div>
-  <button @click="replay()">Replay</button>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      play:true,
       firstPlayer: true,
       rectangle: [
         [0, 0, 0],
@@ -147,15 +145,6 @@ export default {
         const item = document.getElementById(i);
         item.setAttribute("pointer-events", "none");
       }
-    },
-    async replay() {
-      this.play = false;
-      await this.$nextTick();
-      console.log("done");
-      
-      this.play = true;
-      await this.$nextTick();
-      this.init();
     }
   },
 };
