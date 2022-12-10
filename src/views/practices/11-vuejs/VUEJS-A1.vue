@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import TextCounterVue from './Text-Counter.vue';
+import TextCounterVue from './VUEJS-A1-Text-Counter.vue';
 
 </script>
   
