@@ -8,7 +8,7 @@ import FP from './07-fp/FP-Practice.vue'
 import AJ from './08-aj/AJ-Practice.vue'
 import SVG from './09-svg/SVG-Practice.vue'
 import TS from './10-ts/TS-Practice.vue'
-import VUEJS from './11-vuejs/VUEJS-Practice.vue'
+import VUE from './11-vue/Vue-Practice.vue'
 
 import httpRoutes from './01-http/http-routes.js'
 import cssRoutes from './02-css/css-routes.js'
@@ -20,7 +20,7 @@ import fpRoutes from './07-fp/fp-routes.js'
 import ajRoutes from './08-aj/aj-routes.js'
 import svgRoutes from './09-svg/svg-routes.js'
 import tsRoutes from './10-ts/ts-routes.js'
-import vuejsRoutes from './11-vuejs/vuejs-routes.js'
+import vueRoutes from './11-vue/vue-routes.js'
 
 const routes =
     [
@@ -105,12 +105,12 @@ const routes =
             children: tsRoutes
         },
         {
-            path: 'vuejs',
-            component: VUEJS,
+            path: 'vue',
+            component: VUE,
             textIcon: '11',
             title: 'Vue 2 (V)',
-            home_name: 'vuejs',
-            children: vuejsRoutes
+            home_name: 'vue',
+            children: vueRoutes
         }
 ]
 
