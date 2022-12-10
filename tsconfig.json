@@ -35,8 +35,9 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "src/views/practices/10-ts/server.ts", "src/views/practices/10-ts/server.ts"  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src/views/practices/10-ts/server.ts"
   ]
 }
