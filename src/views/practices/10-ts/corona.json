@@ -1,0 +1,66 @@
+[
+    {
+        "region": "Baden-Württemberg",
+        "amount": 4898121
+    },
+    {
+        "region": "Bayern",
+        "amount": 6541681
+    },
+    {
+        "region": "Berlin",
+        "amount": 1363255
+    },
+    {
+        "region": "Brandenburg",
+        "amount": 1059824
+    },
+    {
+        "region": "Bremen",
+        "amount": 286421
+    },
+    {
+        "region": "Hamburg",
+        "amount": 778207
+    },
+    {
+        "region": "Hessen",
+        "amount": 2792885
+    },
+    {
+        "region": "Mecklenburg",
+        "amount": 675122
+    },
+    {
+        "region": "Niedersachsen",
+        "amount": 3597979
+    },
+    {
+        "region": "Nordrhein-Westfalen",
+        "amount": 7543117
+    },
+    {
+        "region": "Rheinland-Pfalz",
+        "amount": 1685809
+    },
+    {
+        "region": "Saarland",
+        "amount": 469873
+    },
+    {
+        "region": "Sachsen",
+        "amount": 1899748
+    },
+    {
+        "region": "Sachsen-Anhalt",
+        "amount": 926111
+    },
+    {
+        "region": "Schleswig-Holstein",
+        "amount": 1118699
+    },
+    {
+        "region": "Thüringen",
+        "amount": 862748
+    }
+]
