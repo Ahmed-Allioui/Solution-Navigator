@@ -8,17 +8,19 @@ import FP from './07-fp/FP-Practice.vue'
 import AJ from './08-aj/AJ-Practice.vue'
 import SVG from './09-svg/SVG-Practice.vue'
 import TS from './10-ts/TS-Practice.vue'
+import VUEJS from './11-vuejs/VUEJS-Practice.vue'
 
-import httpRoutes from './01-http/http-routes'
-import cssRoutes from './02-css/css-routes'
-import rwdRoutes from './03-rwd/rwd-routes'
-import jsRoutes from './04-js/js-routes'
-import domRoutes from './05-dom/dom-routes'
-import esRoutes from './06-es/es-routes'
-import fpRoutes from './07-fp/fp-routes'
-import ajRoutes from './08-aj/aj-routes'
-import svgRoutes from './09-svg/svg-routes'
-import tsRoutes from './10-ts/ts-routes'
+import httpRoutes from './01-http/http-routes.js'
+import cssRoutes from './02-css/css-routes.js'
+import rwdRoutes from './03-rwd/rwd-routes.js'
+import jsRoutes from './04-js/js-routes.js'
+import domRoutes from './05-dom/dom-routes.js'
+import esRoutes from './06-es/es-routes.js'
+import fpRoutes from './07-fp/fp-routes.js'
+import ajRoutes from './08-aj/aj-routes.js'
+import svgRoutes from './09-svg/svg-routes.js'
+import tsRoutes from './10-ts/ts-routes.js'
+import vuejsRoutes from './11-vuejs/vuejs-routes.js'
 
 const routes =
     [
@@ -101,6 +103,14 @@ const routes =
             title: 'TypeScript (TS)',
             home_name: 'ts',
             children: tsRoutes
+        },
+        {
+            path: 'vuejs',
+            component: VUEJS,
+            textIcon: '11',
+            title: 'Vue 2 (V)',
+            home_name: 'vuejs',
+            children: vuejsRoutes
         }
 ]
 
