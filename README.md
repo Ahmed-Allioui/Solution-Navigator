@@ -1,5 +1,9 @@
 # solution-navigator
 
+## Author
+Name: Ahmed Allioui
+Acronym: aallio2s
+
 ## Project setup
 ```
 npm install
