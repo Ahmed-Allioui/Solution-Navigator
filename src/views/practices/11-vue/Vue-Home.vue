@@ -1,10 +1,12 @@
 <template>
-  <h1>Übung 10: TypeScript</h1>
+  <h1>Übung 11: Vue 2</h1>
   <h3>Lernziele</h3>
   <ol>
-    <li>Die Konzepte von TypeScript kennen und anwenden können.</li>
-    <li>Mit TypeScript Typfehler finden können.</li>
-    <li>In TypeScript programmieren können.</li>
-    <li>In TypeScript Deno-Anwendungen schreiben können.</li>
+    <li>Vue-Instanzen konfigurieren können.</li>
+    <li>Vue-Komponenten schreiben können.</li>
+    <li>Single File Vue Components erstellen können.</li>
+    <li>Mit Vue SPAs erstellen können.</li>
+    <li>In Vue SPAs Routing einbauen können.</li>
+    <li>Mit Vuex State Management umsetzen können.</li>
   </ol>
 </template>
