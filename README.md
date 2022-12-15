@@ -26,3 +26,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### start backend server (php)
+```
+cd .\api\
+php -S localhost:8000
+```
