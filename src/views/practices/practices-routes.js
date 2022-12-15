@@ -9,6 +9,8 @@ import AJ from './08-aj/AJ-Practice.vue'
 import SVG from './09-svg/SVG-Practice.vue'
 import TS from './10-ts/TS-Practice.vue'
 import VUE from './11-vue/Vue-Practice.vue'
+import PHP from './12-php/PHP-Practice.vue'
+import WAS from './13-was/WAS-Practice.vue'
 
 import httpRoutes from './01-http/http-routes.js'
 import cssRoutes from './02-css/css-routes.js'
@@ -21,6 +23,8 @@ import ajRoutes from './08-aj/aj-routes.js'
 import svgRoutes from './09-svg/svg-routes.js'
 import tsRoutes from './10-ts/ts-routes.js'
 import vueRoutes from './11-vue/vue-routes.js'
+import phpRoutes from './12-php/php-routes.js'
+import wasRoutes from './13-was/was-routes.js'
 
 const routes =
     [
@@ -111,6 +115,22 @@ const routes =
             title: 'Vue 2 (V)',
             home_name: 'vue',
             children: vueRoutes
+        },
+        {
+            path: 'php',
+            component: PHP,
+            textIcon: '12',
+            title: 'Server-side Scripting (PHP)',
+            home_name: 'php',
+            children: phpRoutes
+        },
+        {
+            path: 'was',
+            component: WAS,
+            textIcon: '13',
+            title: 'Web App Security (WAS)',
+            home_name: 'was',
+            children: wasRoutes
         }
 ]
 
