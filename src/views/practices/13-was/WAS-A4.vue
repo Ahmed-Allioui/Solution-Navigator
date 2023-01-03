@@ -35,6 +35,6 @@
 }
 
 .img-container {
-  width: 600px;
+  max-width: 600px;
 }
 </style>

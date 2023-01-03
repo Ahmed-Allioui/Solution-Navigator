@@ -19,6 +19,6 @@
 
 <style lang="scss" scoped>
 .img-container {
-  width: 700px;
+  max-width: 700px;
 }
 </style>
