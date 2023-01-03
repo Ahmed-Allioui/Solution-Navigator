@@ -1,5 +1,9 @@
 <template>
   <h1>DeepCopy</h1>
+  <h3>Aufgabe</h3>
+  <p>Schreiben Sie eine rekursive Funktion deepCopy( struct ) als ES6-Ausdruck, sodass beliebig geschachtelte Arrays und
+    Objekte tiefenkopiert werden können.</p>
+  <h3>Lösung</h3>
   <p>
     In dieser Aufgabe wurde eine rekursive Funktion deepCopy(struct) als
     ES6-Ausdruck entwickelt, sodass beliebig geschachtelte Arrays und Objekte
@@ -22,29 +26,29 @@
 
 <script setup>
 let me = {
-    name: "Ahmed",
-    address: {
-      city: "Sankt Augustin",
-      app: {
-        number: 53757,
-        floor: 2,
-        name: undefined,
-        foo: null,
-      },
+  name: "Ahmed",
+  address: {
+    city: "Sankt Augustin",
+    app: {
+      number: 53757,
+      floor: 2,
+      name: undefined,
+      foo: null,
     },
-    modules: ["Web Engineering", "Software Engineering"],
-  };
+  },
+  modules: ["Web Engineering", "Software Engineering"],
+};
 
 let deepCopy = function (object) {
   return object == null
     ? undefined
     : ["string", "number", "boolean", "undefined", "function"].includes(
-        typeof object
-      )
-    ? object
-    : Array.isArray(object)
-    ? object.map((o) => deepCopy(o))
-    : Object.fromEntries(Object.entries(object).map((o) => deepCopy(o)));
+      typeof object
+    )
+      ? object
+      : Array.isArray(object)
+        ? object.map((o) => deepCopy(o))
+        : Object.fromEntries(Object.entries(object).map((o) => deepCopy(o)));
 };
 
 let copy = deepCopy(me);
@@ -54,7 +58,6 @@ let equal = me == copy;
 </script>
   
 <style lang="scss" scoped>
-
 .container {
   display: flex;
   flex-wrap: wrap;

@@ -1,6 +1,7 @@
 <template>
   <h1>CSS-Positionierung</h1>
-  <p class="question">
+  <h3>Aufgabe</h3>
+  <p>
     Bauen Sie das dynamische Verhalten in den folgenden beiden Videos exakt
     nach:
   </p>
@@ -8,10 +9,11 @@
     <li><a href="https://www.youtube.com/watch?v=PE3POxjDspo">Video 1</a></li>
     <li><a href="https://www.youtube.com/watch?v=HVmnv3k4__E">Video 2</a></li>
   </ul>
-  <p class="question">
+  <p>
     Arbeiten Sie in beiden Fällen nur mit HTML und CSS, ohne JavaScript.
   </p>
-  <h3>Antwort 1:</h3>
+  <h3>Lösung</h3>
+  <h4>Für das Video 1</h4>
   <div style="display: flex; flex-direction: column">
     <h1 class="überschrift">Erste Überschrift</h1>
     <p>
@@ -232,7 +234,7 @@
     </p>
   </div>
   <br>
-  <h3>Antwort 2:</h3>
+  <h4>Für das Video 2</h4>
   <div class="responsive-container">
     <input type="checkbox" id="image"/>
     <label for="image"> hide and show via checkbox</label>

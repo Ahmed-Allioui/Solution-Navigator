@@ -1,4 +1,9 @@
 <template>
+  <h1>Textanalyse mit filter-map-reduce</h1>
+  <h3>Aufgabe</h3>
+  <p>Schreiben Sie in JavaScript eine Textanalyse. Ermitteln Sie die häufigsten Begriffe im Text Plagiatsresolution.
+    Filtern Sie dabei alle Stoppworte und HTML-Tags. Reduzieren Sie das Ergebnis auf die 3 häufigsten Begriffe.</p>
+  <h3>Lösung</h3>
   <div class="text-container">
     <label>Geben Sie einen Text ein:</label>
     <textarea v-model="text"></textarea>

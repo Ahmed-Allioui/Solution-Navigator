@@ -1,46 +1,33 @@
 <template>
-  <h1>{{titel}}</h1>
-  <h3>Tasks</h3>
+  <h1>{{ titel }}</h1>
+  <h3>Aufgabe</h3>
+  <p>Schreiben Sie in JavaScript eine Funktion topsort(), die eine topologische Sortierung berechnet. Achten Sie auf
+    Performanz. Berechnen Sie die topologische Sortierung in linearer Zeit (Average Case).
+  </p>
+  <h3>Lösung</h3>
+  <h4>Tasks</h4>
   <div class="task-container">
     <div v-for="(task, index) in tasks" :key="index">
-      <label for="{{index}}"
-        >Task {{ index }}
-        <input
-          id="{{index}}"
-          @change="changeHandler()"
-          v-model="tasks[index]"
-        />
+      <label for="{{index}}">Task {{ index }}
+        <input id="{{index}}" @change="changeHandler()" v-model="tasks[index]" />
       </label>
     </div>
     <div>
-      <label
-        >New Task
-        <input
-          @change="newElementHandler()"
-          v-model="tmp"
-          placeholder="New task..."
-        />
+      <label>New Task
+        <input @change="newElementHandler()" v-model="tmp" placeholder="New task..." />
       </label>
     </div>
   </div>
   <br />
-  <h3>Abhängigkeiten</h3>
+  <h4>Abhängigkeiten</h4>
   <div class="dependencies-container">
     <div v-for="(dependency, i) in dependencies" :key="i">
-      <select
-        v-model="dependencies[i][0]"
-        name="dependencies"
-        id="dependencies"
-      >
+      <select v-model="dependencies[i][0]" name="dependencies" id="dependencies">
         <option v-for="(task, j) in tasks" :key="j" v-bind:value="task">
           {{ tasks[j] }}
         </option>
       </select>
-      <select
-        v-model="dependencies[i][1]"
-        name="dependencies"
-        id="dependencies"
-      >
+      <select v-model="dependencies[i][1]" name="dependencies" id="dependencies">
         <option v-for="(task, j) in tasks" :key="j" v-bind:value="task">
           {{ tasks[j] }}
         </option>
@@ -58,12 +45,7 @@
   </div>
   <div class="sorted-tasks-container">
     <div v-if="errorMessage" class="error">{{ errorMessage }}</div>
-    <div
-      v-else
-      v-for="(task, i) in sortedTasks"
-      :key="i"
-      class="sorted-tasks-intern-container"
-    >
+    <div v-else v-for="(task, i) in sortedTasks" :key="i" class="sorted-tasks-intern-container">
       <div class="border">
         {{ task }}
       </div>
@@ -218,6 +200,7 @@ label {
   display: flex;
   flex-direction: column;
 }
+
 .sorted-tasks-container {
   display: flex;
   flex-wrap: wrap;

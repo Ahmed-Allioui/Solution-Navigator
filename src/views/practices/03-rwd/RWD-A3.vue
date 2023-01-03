@@ -1,5 +1,6 @@
 <template>
   <h1>Responsiv mit Grid</h1>
+  <h3>Aufgabe</h3>
   <p>
     Implementieren Sie folgende Landing Page responsiv mit Grid Layout.
     Vermeiden Sie auch hier das Erscheinen von horizontalen Scrollbars so weit
@@ -10,7 +11,7 @@
     alt="Responsive Design"
     class="example"
   />
-  <h3>Antwort</h3>
+  <h3>Lösung</h3>
   <div class="main-container">
     <div class="header">
       <div class="button-container">

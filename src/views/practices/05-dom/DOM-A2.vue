@@ -5,13 +5,14 @@
 <script>
 
 var speakers = [];
+let timer;
 
 class Speaker {
   constructor(name) {
-    this.name=name;
-    this.timer=new Date();
+    this.name = name;
+    this.timer = new Date();
     this.timer.setHours(0, 0, 0, 0);
-    this.stoped=true;
+    this.stoped = true;
   }
 }
 
@@ -149,14 +150,17 @@ function addSecond(date) {
 }
 
 export default {
-  mounted() {
+  mounted() {  
     const root = document.getElementById("root");
     root.append(titel());
     root.append(subtitel());
     const ul = document.createElement("ul");
     root.append(inputContainer(ul));
     root.append(speakersContainer(ul));
-    setInterval(appTimer, 1000);
+    timer = setInterval(appTimer, 1000);
+  },
+  beforeUnmount() {
+    clearInterval(timer)
   },
 };
 </script>

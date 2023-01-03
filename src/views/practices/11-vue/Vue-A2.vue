@@ -1,9 +1,9 @@
 <template>
   <h1>Menü-Komponente</h1>
-  <p>In dieser Aufgabe wurde eine flexible Vue.js Single File Component für
-    Menüs geschrieben. Dann wurde die Komponente in dieser Webseite zweimal angewandt,
-    einmal horizontal, das andere Mal vertikal.</p>
-  <p class="question">Lösung:</p>
+  <h3>Aufgabe</h3>
+  <p>Schreiben Sie eine möglichst flexible Vue.js Single File Component für Menüs und wenden Sie diese in derselben
+    Webseite zweimal an, einmal horizontal, das andere Mal vertikal.</p>
+  <h3>Lösung</h3>
   <p>Diese Komponente ist standardmäßig horizontal. Also wenn ein vertikaler
     Menu benötigt wird, soll nur den Flag <strong>isVertical</strong> auf <strong>True</strong> gesetzt werden.</p>
   <br>

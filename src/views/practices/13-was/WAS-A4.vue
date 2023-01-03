@@ -1,6 +1,6 @@
 <template>
   <h1>WebGoat Cross-Site Request Forgeries</h1>
-  <p class="question">Aufgabe</p>
+  <h3>Aufgabe</h3>
   <ol>
     <li>Installieren Sie WebGoat.</li>
     <li>Starten Sie das Docker-Image mit WebGoat.</li>
@@ -8,7 +8,7 @@
     <li>Lösen Sie zu (A8:2013) Request Forgeries, Cross-Site Request
       Forgeries.</li>
   </ol>
-  <p class="question">Lösung</p>
+  <h3>Lösungen</h3>
   <div class="container">
     <p>Für diese Aufgabe benutzen wir diese Form: </p>
     <form accept-charset="UNKNOWN" id="basic-csrf-get" method="POST" name="form1" target="_blank" successcallback=""

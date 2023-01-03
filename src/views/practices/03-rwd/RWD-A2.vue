@@ -1,5 +1,6 @@
 <template>
   <h1>Responsiv mit Grid Mobile-First</h1>
+  <h3>Aufgabe</h3>
   <p>
     Spielen Sie zunächst das
     <a href="https://cssgridgarden.com/#de">Grid Garden-Spiel</a>, um Grid
@@ -15,7 +16,7 @@
     alt="Responsive Design"
     class="example"
   />
-  <h3>Antwort</h3>
+  <h3>Lösung</h3>
   <div class="titel">
     <div class="desktop">Desktop</div>
     <div class="tablet">Tablet</div>

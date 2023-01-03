@@ -1,9 +1,12 @@
 <template>
   <h1>Funktionen in JavaScript</h1>
-  <p class="question">In dieser Aufgabe, sollen Funktionen implementiert werden. Die Implementierung kann in dem Script dieses Vue gefunden werden.</p>
+  <p class="question">In dieser Aufgabe, sollen Funktionen implementiert werden. Die Implementierung kann in dem Script
+    dieses Vue gefunden werden.</p>
   <p class="question">In dem Script sind auch Tests zu finden, die mit <i>console.assert</i> durchgefüht wurden.</p>
-  <p class="question">Die <i>once</i> Funktion sollte einen error zeigen, wenn sie mehrmals aufgerufen werden. Deswegene sind die entsprechenden Errors auf der Console zu sehen.</p>
-  <p class="question">Genauso für die Funktion <i>revokable</i>. Sie soll nämlich einen Fehler werfen, wenn sie aufgerufen wurde, nachdem sie revoked wurde.</p>
+  <p class="question">Die <i>once</i> Funktion sollte einen error zeigen, wenn sie mehrmals aufgerufen werden. Deswegene
+    sind die entsprechenden Errors auf der Console zu sehen.</p>
+  <p class="question">Genauso für die Funktion <i>revokable</i>. Sie soll nämlich einen Fehler werfen, wenn sie
+    aufgerufen wurde, nachdem sie revoked wurde.</p>
 </template>
 
 <script setup>
@@ -55,7 +58,7 @@ const once = (fn) => {
       return;
     }
     called = true;
-    return fn(x,y);
+    return fn(x, y);
   };
 };
 
@@ -70,11 +73,11 @@ const counterf = (counter) => {
 const revocable = (fn) => {
   return {
     revoked: false,
-    invoke: function(arg) {
-      if(this.revoked) console.error("You can not more call a method that is already revoked")
+    invoke: function (arg) {
+      if (this.revoked) console.error("You can not more call a method that is already revoked")
       else return fn(arg)
     },
-    revoke: function() {
+    revoke: function () {
       this.revoked = true;
     }
   }
@@ -83,13 +86,13 @@ const revocable = (fn) => {
 const vector = () => {
   return {
     array: [],
-    append: function(item) {
+    append: function (item) {
       this.array.push(item);
     },
-    store: function(pos, item) {
+    store: function (pos, item) {
       this.array[pos] = item;
     },
-    get: function(pos) {
+    get: function (pos) {
       return this.array[pos]
     }
   }
@@ -176,4 +179,5 @@ console.assert(my_vector.get(1) == 8, "Testing vector");
 </script>
   
 <style lang="scss" scoped>
+
 </style>

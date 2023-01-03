@@ -1,13 +1,13 @@
 <template>
   <h1>WebGoat Injection</h1>
-  <p class="question">Aufgabe</p>
+  <h3>Aufgabe</h3>
   <ol>
     <li>Installieren Sie WebGoat.</li>
     <li>Starten Sie das Docker-Image mit WebGoat.</li>
     <li>Öffnen Sie die Landingpage von WebGoat.</li>
     <li>Lösen Sie die Aufgaben in (A1) Injection, SQL Injection (Intro).</li>
   </ol>
-  <p class="question">Lösung</p>
+  <h3>Lösung</h3>
   <div class="img-container">
     <img src="./sql-injection.jpeg" alt="SQL Injection">
   </div>

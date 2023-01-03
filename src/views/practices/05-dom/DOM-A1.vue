@@ -1,5 +1,9 @@
 <template>
   <h1>Performanz-Messungen von DOM-Operationen</h1>
+  <h3>Aufgabe</h3>
+  <p>Implementieren Sie Performanz-Messungen zum Vergleich von innerHTML, innerText, textContent und outerHTML.
+    selbstständig in JavaScript durch Nutzung der DOM-API.</p>
+  <h3>Lösung</h3>
   <div id="container">
     <div id="subcontainer"></div>
   </div>
@@ -10,19 +14,19 @@
     </tr>
     <tr>
       <td>innerHTML</td>
-      <td>{{timeInnerHTML}}</td>
+      <td>{{ timeInnerHTML }}</td>
     </tr>
     <tr>
       <td>innerText</td>
-      <td>{{timeInnerText}}</td>
+      <td>{{ timeInnerText }}</td>
     </tr>
     <tr>
       <td>textContent</td>
-      <td>{{timeTextContent}}</td>
+      <td>{{ timeTextContent }}</td>
     </tr>
     <tr>
       <td>outerHTML</td>
-      <td>{{timeOuterHTML}}</td>
+      <td>{{ timeOuterHTML }}</td>
     </tr>
   </table>
   <div></div>

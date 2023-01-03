@@ -1,19 +1,17 @@
 <template>
   <h1>Klammerpaare</h1>
+  <h3>Aufgabe</h3>
+  <p>Schreiben Sie eine Webseite, in die man eine Zeichenkette mit beliebigen Buchstaben, Zahlen und Sonderzeichen
+    eingeben kann, die beliebig geschachtelte Klammern [...] , (...) und {...} enthält, sodass sofort geprüft wird, ob
+    alle Klammerpaare korrekt geschachtelt sind. Das Eingabefeld der Zeichenkette soll rot gefärbt werden, wenn es ein
+    Klammerpaar gibt, das falsch geschachtelt ist.</p>
+  <h3>Lösung</h3>
   <p>Sie können hier Klammerpaare hinzufügen bzw. bearbeiten:</p>
   <div class="container">
     <div v-for="(pair, index) in pairs" :key="index">
       <label for="{{index}}">
-        <input
-          class="pair"
-          id="1-{{index}}"
-          v-model="pairs[index][0]"
-        />
-        <input
-          class="pair"
-          id="1-{{index}}"
-          v-model="pairs[index][1]"
-        />
+        <input class="pair" id="1-{{index}}" v-model="pairs[index][0]" />
+        <input class="pair" id="1-{{index}}" v-model="pairs[index][1]" />
       </label>
     </div>
   </div>
@@ -22,16 +20,15 @@
   </div>
   <br>
   <div>
-    <label for="text"
-      >Hier können Sie Ihren Text:
+    <label for="text">Hier können Sie Ihren Text eingeben:
       <input class="text" id="text" v-model="text" />
     </label>
   </div>
   <div>
-    <button class="primary" @click="checkPairs()">Klammerpaare überprüfen</button>
+    <button class="primary" @click="checkPairs()">{{ buttonTitel }}</button>
   </div>
   <div class="error question">
-    {{errorMsg}}
+    {{ errorMsg }}
   </div>
 </template>
 
@@ -48,7 +45,8 @@ export default {
         ["{", "}"],
       ],
       text: "",
-      errorMsg: ""
+      errorMsg: "",
+      buttonTitel: "Klammerpaare überprüfen"
     };
   },
   methods: {
@@ -59,35 +57,35 @@ export default {
       let correct = this.isInputCorrect();
       let error = "Die Klammerpaare sind nicht korrekt!";
       console.assert(correct, error);
-      if(correct) {
+      if (correct) {
         document.getElementById('text').style.color = "green";
         return;
       }
       document.getElementById('text').style.color = "red";
-      if(this.errorMsg.length < 1) this.errorMsg = error;
+      if (this.errorMsg.length < 1) this.errorMsg = error;
     },
     isInputCorrect() {
       let map = this.generateMap();
       let inversedMap = this.generateInversedMap();
       let stack = new Stack();
-      if(map == null) return false;
-      for(let character of this.text) {
+      if (map == null) return false;
+      for (let character of this.text) {
         let actual = stack.pop();
         let prevOf = inversedMap.get(character);
-        if(prevOf && actual && prevOf == actual) {
+        if (prevOf && actual && prevOf == actual) {
           stack.pull();
           continue;
         }
-        if(prevOf && prevOf != actual) {
+        if (prevOf && prevOf != actual) {
           this.errorMsg = "Unerwarteter Token: " + character;
           return false;
         }
         let nextOf = map.get(character);
-        if(nextOf) {
+        if (nextOf) {
           stack.push(character);
         }
       }
-      if(!stack.isEmpty()) {
+      if (!stack.isEmpty()) {
         this.errorMsg = "Klammerpaare fehlen";
         return false;
       }
@@ -96,8 +94,8 @@ export default {
     generateMap() {
       this.errorMsg = "";
       let map = new Map();
-      for(let pair of this.pairs) {
-        if(pair[0]?.length == 1 && pair[1]?.length == 1) {
+      for (let pair of this.pairs) {
+        if (pair[0]?.length == 1 && pair[1]?.length == 1) {
           map.set(pair[0], pair[1])
         } else {
           this.errorMsg = "Die Klammerpaare müssen genau aus einem Buchstabe bestehen";
@@ -109,8 +107,8 @@ export default {
     generateInversedMap() {
       this.errorMsg = "";
       let map = new Map();
-      for(let pair of this.pairs) {
-        if(pair[0]?.length == 1 && pair[1]?.length == 1) {
+      for (let pair of this.pairs) {
+        if (pair[0]?.length == 1 && pair[1]?.length == 1) {
           map.set(pair[1], pair[0])
         } else {
           this.errorMsg = "Die Klammerpaare müssen genau aus einem Buchstabe bestehen";
@@ -131,6 +129,7 @@ export default {
   flex-wrap: wrap;
   gap: 20px 50px;
 }
+
 input.pair {
   max-width: 50px;
   text-align: center;

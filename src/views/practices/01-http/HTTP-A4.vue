@@ -1,5 +1,6 @@
 <template>
   <h1>HTML Wireframe</h1>
+  <h3>Aufgabe</h3>
   <p class="question">Gegeben ist folgendes HTML-Wireframe:</p>
   <img src="./picture-1.4.png" alt="" class="picture" />
   <p class="question">
@@ -14,12 +15,13 @@
       >Eich</a
     >.
   </p>
-
+  <h3>Lösung</h3>
+  
   <div class="rawHTML">
-    <h3>Code</h3>
+    <h4>Code</h4>
     <img src="./code.jpg" alt="Code">
     <br>
-    <h3>Result</h3>
+    <h4>Result</h4>
     <img src="./result.jpg" alt="Result">
   </div>
 </template>
