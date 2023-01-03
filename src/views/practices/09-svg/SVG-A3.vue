@@ -30,6 +30,7 @@ export default {
       scoreFirstPlayer: 0,
       scoreSecondPlayer: 0,
       gameEndedWithWin: false,
+      gameEndedWithoutWin: false,
       gameEnded: false,
       svgns: "http://www.w3.org/2000/svg",
       boardSize: 90,
