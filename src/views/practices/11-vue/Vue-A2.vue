@@ -8,11 +8,11 @@
     Menu benötigt wird, soll nur den Flag <strong>isVertical</strong> auf <strong>True</strong> gesetzt werden.</p>
   <br>
   <div>
-    <MenuVue />
+    <MenuVue isVertical />
   </div>
   <br>
   <div>
-    <MenuVue isVertical="true" />
+    <MenuVue />
   </div>
 
 </template>
