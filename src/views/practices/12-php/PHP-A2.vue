@@ -42,21 +42,9 @@ export default {
     document.querySelector('button').addEventListener('click', (e) => {
       e.preventDefault();
       fetch('http://localhost:8000/login', {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        //mode: 'cors', // no-cors, *cors, same-origin
-        //cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        //credentials: 'same-origin', // include, *same-origin, omit
-        headers: {
-          //"Accept": "application/json",
-          //"Content-Type": "application/json",
-          //'Access-Control-Allow-Origin':'*',
-          //'Access-Control-Allow-Headers':'*'
-          //'Content-Type': 'application/json'
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        //redirect: 'follow', // manual, *follow, error
-        //referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: new FormData(document.getElementById('login-form')) // body data type must match "Content-Type" header
+        method: 'POST',
+        headers: {},
+        body: new FormData(document.getElementById('login-form'))
       }).then(response => {
         this.responseArrived = true;
         this.loginSucceed = response.status < 300;

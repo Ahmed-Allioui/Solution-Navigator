@@ -6,29 +6,29 @@
 </template>
 
 <script>
-    export default {
-        props: {
-            to: { default: '/pagenotfound' },
-            text: { type: String, default: 'click me' },
-            icon: { type: String, default: 'menu' }
-        }
-    };
+export default {
+    props: {
+        to: { default: '/pagenotfound' },
+        text: { type: String, default: 'click me' },
+        icon: { type: String, default: 'menu' }
+    }
+};
 </script>
 
 <style lang="scss" scoped>
-
 .button {
     display: flex;
     align-items: center;
     padding: 0.7rem 1.2rem;
     text-decoration: none;
     font-size: medium;
-    
+
     .text {
         padding-left: 5px;
     }
 
-    .text, .material-icons {
+    .text,
+    .material-icons {
         color: var(--light);
     }
 
@@ -36,10 +36,12 @@
         font-size: 2rem;
     }
 
-    &:hover, &.router-link-exact-active {
+    &:hover,
+    &.router-link-exact-active {
         background-color: var(--dark);
 
-        .text, .material-icons {
+        .text,
+        .material-icons {
             color: var(--primary);
         }
     }

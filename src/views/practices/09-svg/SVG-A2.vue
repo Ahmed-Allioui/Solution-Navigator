@@ -37,7 +37,7 @@ export default {
           this.statistics = json;
           return json;
         })
-        .then(this.generateChart); // to change
+        .then(this.generateChart);
     })();
   },
   methods: {

@@ -15,8 +15,8 @@
 </template>
 
 <script setup>
-import Sidebar from "./components/sidebar/App-Sidebar.vue";
-import Navbar from "./components/navbar/App-Navbar.vue";
+import Sidebar from "./components/atoms/App-Sidebar.vue";
+import Navbar from "./components/molecules/App-Navbar.vue";
 import practicesRoutes from "./views/practices/practices-routes";
 import routes from "./router/routes";
 </script>

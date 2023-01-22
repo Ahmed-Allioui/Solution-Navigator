@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import NavbarButton from './App-Task-Navbar-Button.vue'
+import NavbarButton from '../atoms/App-Task-Navbar-Button.vue'
 export default {
   props: {
     tabs: {
