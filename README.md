@@ -18,15 +18,10 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### start backend server (php)
+### Start backend server (php)
 ```
 cd .\api
 php -S localhost:8000
