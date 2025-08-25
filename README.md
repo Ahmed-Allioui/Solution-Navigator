@@ -1,8 +1,7 @@
 # solution-navigator
 
 ## Author
-Name: Ahmed Allioui\
-Acronym: aallio2s
+Name: Ahmed Allioui
 
 ## Project setup
 ```
